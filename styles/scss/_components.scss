@@ -17,6 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: slide-in--down 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) alternate
+    forwards;
 
   @media (min-width: 810px) {
     padding: 6rem 8rem;
@@ -186,6 +188,8 @@
       padding-inline: 1rem;
       position: relative;
       overflow-x: hidden;
+      animation: slide-in--right 1.5s cubic-bezier(0.79, 0.14, 0.15, 0.86)
+        alternate forwards;
 
       @media (min-width: 810px) {
         padding-inline: 3rem;
@@ -199,6 +203,8 @@
 
   &__content {
     padding: 4rem 3rem;
+    animation: slide-in--left 1.5s cubic-bezier(0.79, 0.14, 0.15, 0.86)
+      alternate forwards;
 
     & > *:not(:last-child) {
       margin-bottom: 1.5rem;
@@ -297,3 +303,59 @@
     color: $color-primary;
   }
 }
+
+// @keyframes slide-in--left {
+//   0% {
+//     transform: translateX(-100%);
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// @keyframes slide-in--right {
+//   0% {
+//     transform: translateX(100%);
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// @keyframes slide-in--down {
+//   0% {
+//     transform: translateY(-100%);
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// .blink-1 {
+//   animation: blink 0.8s infinite both;
+// }
+
+// .blink-2 {
+//   animation: blink 0.9s infinite both;
+// }
+
+// .blink-3 {
+//   animation: blink 1s infinite both;
+// }
+
+// @keyframes blink {
+//   0% {
+//     opacity: 1;
+//   }
+
+//   50% {
+//     opacity: 0.5;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }

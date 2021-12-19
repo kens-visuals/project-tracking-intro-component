@@ -61,6 +61,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: slide-in--down 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) alternate forwards;
 }
 @media (min-width: 810px) {
   .header {
@@ -210,6 +211,7 @@ body {
   padding-inline: 1rem;
   position: relative;
   overflow-x: hidden;
+  animation: slide-in--right 1.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) alternate forwards;
 }
 @media (min-width: 810px) {
   .main__img-wrapper {
@@ -223,6 +225,7 @@ body {
 }
 .main__content {
   padding: 4rem 3rem;
+  animation: slide-in--left 1.5s cubic-bezier(0.79, 0.14, 0.15, 0.86) alternate forwards;
 }
 .main__content > *:not(:last-child) {
   margin-bottom: 1.5rem;
