@@ -182,12 +182,14 @@
   }
 
   &__img {
-    max-width: clamp(140%, 5vw, 200%);
+    max-width: clamp(140%, 2vw, 190%);
 
     &-wrapper {
       padding-inline: 1rem;
       position: relative;
+      z-index: -1;
       overflow-x: hidden;
+
       animation: slide-in--right 1.5s cubic-bezier(0.79, 0.14, 0.15, 0.86)
         alternate forwards;
 
@@ -304,58 +306,58 @@
   }
 }
 
-// @keyframes slide-in--left {
-//   0% {
-//     transform: translateX(-100%);
-//   }
+.blink-1 {
+  animation: blink 0.8s infinite both;
+}
 
-//   100% {
-//     transform: translateX(0);
-//   }
-// }
+.blink-2 {
+  animation: blink 0.9s infinite both;
+}
 
-// @keyframes slide-in--right {
-//   0% {
-//     transform: translateX(100%);
-//   }
+.blink-3 {
+  animation: blink 1s infinite both;
+}
 
-//   100% {
-//     transform: translateX(0);
-//   }
-// }
+@keyframes slide-in--left {
+  0% {
+    transform: translateX(-100%);
+  }
 
-// @keyframes slide-in--down {
-//   0% {
-//     transform: translateY(-100%);
-//   }
+  100% {
+    transform: translateX(0);
+  }
+}
 
-//   100% {
-//     transform: translateX(0);
-//   }
-// }
+@keyframes slide-in--right {
+  0% {
+    transform: translateX(100%);
+  }
 
-// .blink-1 {
-//   animation: blink 0.8s infinite both;
-// }
+  100% {
+    transform: translateX(0);
+  }
+}
 
-// .blink-2 {
-//   animation: blink 0.9s infinite both;
-// }
+@keyframes slide-in--down {
+  0% {
+    transform: translateY(-100%);
+  }
 
-// .blink-3 {
-//   animation: blink 1s infinite both;
-// }
+  100% {
+    transform: translateX(0);
+  }
+}
 
-// @keyframes blink {
-//   0% {
-//     opacity: 1;
-//   }
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
 
-//   50% {
-//     opacity: 0.5;
-//   }
+  50% {
+    opacity: 0.5;
+  }
 
-//   100% {
-//     opacity: 1;
-//   }
-// }
+  100% {
+    opacity: 1;
+  }
+}
