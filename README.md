@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [https://kens-visuals.github.io/project-tracking-intro-component/](https://kens-visuals.github.io/project-tracking-intro-component/)
-- Solution URL: [TO_BE_UPDATED](TO_BE_UPDATED)
+- Solution URL: [https://www.frontendmentor.io/solutions/project-tracking-intro-component-with-scss-css-animations-and-bem-pdiPZBEWn](https://www.frontendmentor.io/solutions/project-tracking-intro-component-with-scss-css-animations-and-bem-pdiPZBEWn)
 
 ## My process
 
