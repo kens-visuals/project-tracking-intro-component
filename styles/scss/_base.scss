@@ -1,0 +1,57 @@
+$color-primary: hsl(230, 29%, 20%);
+$color-primary--dark: hsl(230, 11%, 40%);
+$color-primary--light: hsl(231, 7%, 65%);
+$color-secondary: hsl(207, 33%, 95%);
+$color-tertiary: hsl(0, 100%, 68%);
+
+//  Headings, Call-to-actions, Navigation
+$font-primary: 'Barlow Condensed', sans-serif; // - Weights: 400, 700
+
+// Body
+$font-secondary: 'Barlow', sans-serif; // - Weights: 400
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: $font-primary;
+  font-weight: 700;
+  text-rendering: optimizeSpeed;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
