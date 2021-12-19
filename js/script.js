@@ -2,7 +2,7 @@ const nav = document.querySelector('.js-nav');
 const hamburger = document.querySelector('.js-hamburger');
 const hamburgerBtn = document.querySelector('.js-hamburger-btn');
 
-hamburgerBtn.addEventListener('click', () => {
+const toggleMenu = function () {
   if (!nav.classList.contains('nav--is-open')) {
     nav.classList.add('nav--is-open');
     hamburger.src = './images/icon-close.svg';
@@ -12,4 +12,6 @@ hamburgerBtn.addEventListener('click', () => {
     hamburger.src = './images/icon-hamburger.svg';
     hamburgerBtn.setAttribute('aria-expanded', false);
   }
-});
+};
+
+hamburgerBtn.addEventListener('click', toggleMenu);
