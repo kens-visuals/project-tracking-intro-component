@@ -13,6 +13,7 @@
 
 .header {
   padding: 4rem 3rem;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,21 +36,132 @@
   }
 
   &__hamburger {
+    @media (min-width: 810px) {
+      display: none;
+    }
   }
 
   &__nav {
-    display: none;
+    width: 85%;
+    max-width: 65rem;
+    background-color: $color-secondary--light;
+    box-shadow: rgba($color-primary, 0.35) 0px 5px 15px;
+    padding: 3rem;
+    position: absolute;
+    top: 10rem;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &.nav--is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (min-width: 810px) {
+      all: revert;
+    }
   }
 
   &__list {
     list-style: none;
+    text-align: center;
+
+    @media (min-width: 810px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+    }
   }
 
   &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+
+      @media (min-width: 810px) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__link {
+    &:link,
+    &:visited {
+      color: $color-primary;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 0.1rem;
+        background-color: $color-primary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      &:active {
+        &::after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+
+      @media (min-width: 1140px) {
+        font-size: 1.6rem;
+      }
+    }
+
     &--gray {
+      &:link,
+      &:visited {
+        width: 100%;
+        color: $color-primary--light;
+        border-top: 0.1rem solid rgba($color-primary--light, 0.3);
+        padding-top: 2rem;
+        display: inline-block;
+
+        @media (min-width: 810px) {
+          width: unset;
+          border-top: unset;
+          padding: 0;
+
+          &::before {
+            content: '·';
+            margin-right: 4rem;
+            font-size: 2rem;
+          }
+
+          &::after {
+            content: '';
+            width: 0;
+            height: 0.1rem;
+            background-color: $color-primary;
+            position: absolute;
+            left: 4.5rem;
+            bottom: 0;
+            opacity: 0;
+            transition: all 0.3s;
+          }
+
+          &:hover,
+          &:active {
+            &::after {
+              width: 47%;
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -68,7 +180,7 @@
   }
 
   &__img {
-    max-width: clamp(140%, 5vw, 190%);
+    max-width: clamp(140%, 5vw, 200%);
 
     &-wrapper {
       padding-inline: 1rem;
@@ -154,6 +266,12 @@
     padding: 1rem 2rem;
     text-transform: uppercase;
     flex-shrink: 0;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba($color-tertiary, 0.7);
+      cursor: pointer;
+    }
 
     @media (min-width: 1140px) {
       font-size: 2rem;

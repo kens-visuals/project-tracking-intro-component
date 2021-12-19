@@ -18,6 +18,8 @@
     />
     <link rel="stylesheet" type="text/css" href="styles/css/style.css" />
 
+    <script defer src="js/script.js"></script>
+
     <title>Frontend Mentor | Project Tracking Intro Component</title>
   </head>
   <body>
@@ -27,7 +29,11 @@
       <header class="header">
         <img src="./images/logo.svg" alt="company" class="header__logo" />
 
-        <button class="header__btn js-hamburger-btn">
+        <button
+          class="header__btn js-hamburger-btn"
+          aria-label="hamburger"
+          aria-expanded="false"
+        >
           <img
             src="./images/icon-hamburger.svg"
             alt=""
@@ -35,7 +41,7 @@
           />
         </button>
 
-        <nav class="header__nav">
+        <nav class="header__nav js-nav">
           <ul class="header__list">
             <li class="header__item">
               <a href="#" class="header__link">Product</a>
