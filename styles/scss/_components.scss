@@ -35,9 +35,7 @@
   &__btn {
     background: unset;
     border: 0;
-  }
 
-  &__hamburger {
     @media (min-width: 810px) {
       display: none;
     }
@@ -99,7 +97,7 @@
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         width: 0;
         height: 0.1rem;
         background-color: $color-primary;
@@ -138,13 +136,13 @@
           padding: 0;
 
           &::before {
-            content: '·';
+            content: "·";
             margin-right: 4rem;
             font-size: 2rem;
           }
 
           &::after {
-            content: '';
+            content: "";
             width: 0;
             height: 0.1rem;
             background-color: $color-primary;
